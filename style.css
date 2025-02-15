@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(./images/Gemini_Generated_Image_ib1aunib1aunib1a.jpg);
+    background-size: cover;
+}
+
+.quiz-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transform: scale(0.9);
+    animation: fadeIn 1s ease-out forwards;
+    font-family: "Poppins", serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    animation: bounceIn 1s ease-in-out;
+    font-family: "Jersey 10", serif;
+
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.question {
+    margin: 10px 0;
+    animation: fadeIn 0.5s ease-out;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        height: auto;
+        padding: 20px;
+        
+
+    }
+    .quiz-container {
+        width: 90%;
+        padding: 15px;
+        margin-top: 100px;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 15px;
+        
+    }
+
+    .quiz-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+}
